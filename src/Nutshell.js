@@ -1,7 +1,7 @@
 import { Route, Routes, Outlet } from 'react-router-dom';
 import './Nutshell.css';
-import { MessageList } from './Components/Messages/MessageList';
-import { MessageForm } from './Components/Messages/MessageForm';
+import { MessageForm } from './components/Messages/MessageForm';
+import { MessageList } from './components/Messages/MessageList';
 
 function Nutshell() {
   return (
@@ -18,7 +18,7 @@ function Nutshell() {
 <Outlet />
 </>
   }>
-     <Route path="/messages/create" element={ <MessageForm />} />
+       <Route path="/messages/create" element={ <MessageForm />} />
     </Route>
 
   </Routes>
