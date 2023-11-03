@@ -59,10 +59,10 @@ return <>
         <article className="tasks">
             {
                 tasks.map(
-                    (task) => {
+                    (currentTask) => {
                         return <section className="task">
-                            <header>{task?.user?.username}'s Tasks:</header>
-                            <div>{task.tasks}</div>
+                            <header>{currentTask?.user?.username}'s Tasks:</header>
+                            <div>{currentTask.task} {currentTask.completionDate}</div>
                         </section>
                     }
                 )

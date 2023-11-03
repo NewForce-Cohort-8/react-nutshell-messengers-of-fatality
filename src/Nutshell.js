@@ -13,17 +13,17 @@ function Nutshell() {
       <header className="App-header">
         <h1>Welcome to Nutshell</h1>
       </header>
-
-    <TaskList/>
+      <TaskList />
     </div>
     <Outlet/>
     </>
-    }> 
-    </Route>
+    }/> 
+    {/* <Route path="/tasks" element={  }/> */}
+  
     </Routes>
   
   )
-  ();
+
 }
 
 export default Nutshell;
