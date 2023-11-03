@@ -1,60 +1,43 @@
-import { Route, Routes, Outlet } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Authorized } from "./components/views/Authorized";
+import { ApplicationViews } from "./components/views/ApplicationViews";
+import { UserNav } from "./components/Nav/UserNaveBar";
+// import { UserViews } from "./components/views/UserViews";
+import { Login } from "./components/auth/Login"
+import { Register } from "./components/auth/Register";
 import './Nutshell.css';
 import { MessageForm } from './components/Messages/MessageForm';
 import { MessageList } from './components/Messages/MessageList';
 
-function Nutshell() {
+export const Nutshell = () => {
   return (
-  <Routes>
-    <Route path="/" element={
-      <>
+    <BrowserRouter>
     <div className="Dashboard">
       <header className="App-header">
         <h1>Welcome to Nutshell</h1>
-      </header>    
-     <MessageList />
+      
+      <Routes>
+          <Route path="/login" element={<Login />} />
+          
+          <Route path="/register" element={<Register />} />
+          
+          <Route path="*" element={
+			      <Authorized>
+				      <>
+                <UserNav />
+                <ApplicationViews />
+					      {/* <UserViews /> */}
+				      </>
+			      </Authorized>
+
+		      } />
+      </Routes>
+
+    </header>
     </div>
-
-<Outlet />
-</>
-  }>
-       <Route path="/messages/create" element={ <MessageForm />} />
-    </Route>
-
-  </Routes>
-
-  
+  </BrowserRouter>
   );
 
 }
-
-export default Nutshell;
-
-// export const Nutshell = () => {
-//   return ( <Routes>
-//     <Route path='/nav/NavBar' element={<NavBar />} />
-//   </Routes>
-    
-//   );
-// }
-
-// export default Nutshell;
-
-// function Nutshell() {
-//   return (
-//     <div className="Dashboard">
-//       <header className="App-header">
-//         <h1>Welcome to Nutshell</h1>
-//       </header>
-//     </div>
-//     <Route path='/nav/NavBar' element={<NavBar />} />
-//   );
-// }
-
-// export default Nutshell;
-
-
-
-
 
 
