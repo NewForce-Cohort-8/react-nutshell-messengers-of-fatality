@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { Authorized } from "./components/views/Authorized";
-import { ApplicationViews } from "./components/views/ApplicationViews";
+import { Authorized } from "./components/Views/Authorized";
+import { ApplicationViews } from "./components/Views/ApplicationViews";
 import { UserNav } from "./components/Nav/UserNaveBar";
 // import { UserViews } from "./components/views/UserViews";
 import { Login } from "./components/auth/Login"
@@ -27,6 +27,7 @@ export const Nutshell = () => {
                 <UserNav />
                 <ApplicationViews />
 					      {/* <UserViews /> */}
+                
 				      </>
 			      </Authorized>
 
