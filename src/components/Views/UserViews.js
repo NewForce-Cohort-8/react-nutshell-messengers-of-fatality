@@ -5,6 +5,7 @@ import { ArticleEntry } from "../articles/ArticleEntry"
 import { MessageList } from "../Messages/MessageList"
 import { MessageForm } from "../Messages/MessageForm"
 import { MessageEdit } from "../Messages/MessageEdit"
+import { Images } from "../images/Images"
 
 export const UserViews = () => {
     return (
@@ -17,6 +18,7 @@ export const UserViews = () => {
                     <Outlet />
                 </>
             }>
+                <Route path="images" element={ <Images />} />
                 <Route path="messageForm" element={<MessageForm />} />
                 <Route path="messages" element={<MessageList />} />
                 <Route path="messages/:messageId/edit" element={<MessageEdit />}/>
