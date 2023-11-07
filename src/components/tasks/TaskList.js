@@ -54,8 +54,8 @@ export const TaskList = () => {
 // )
 //to remove unique key prop error similar to id attribute (uniquely identifies that componenet) React uses the unique keys to update the DOM. Add a key prop primary key of each object to build key property key={`ticket--${ticket.id}`}
 return <>
-    <button onClick={() => navigate("/tasks/create")}>Create Message</button>
-          <h2>Nutshell Messages</h2>
+    <button onClick={() => navigate("/tasks/create")}>Add Task</button>
+          <h2>Nutshell Tasks</h2>
         <article className="tasks">
             {
                 tasks.map(

@@ -1,29 +1,45 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Authorized } from "./components/views/Authorized";
+import { ApplicationViews } from "./components/views/ApplicationViews";
+import { UserNav } from "./components/Nav/UserNaveBar";
+// import { UserViews } from "./components/views/UserViews";
+import { Login } from "./components/auth/Login"
+import { Register } from "./components/auth/Register";
 import './Nutshell.css';
-import { Outlet, Route, Routes } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 import { TaskList } from './components/tasks/TaskList';
 
 
 
-function Nutshell() {
+export const Nutshell = () => {
   return (
-    <Routes>
-<Route path="/" element={
-<>
-  <div className="Dashboard">
+    <BrowserRouter>
+    <div className="Dashboard">
       <header className="App-header">
         <h1>Welcome to Nutshell</h1>
-      </header>
+      
+      <Routes>
+          <Route path="/login" element={<Login />} />
+          
+          <Route path="/register" element={<Register />} />
+          
+          <Route path="*" element={
+			      <Authorized>
+				      <>
+                <UserNav />
+                <ApplicationViews />
+					      {/* <UserViews /> */}
+				      </>
+			      </Authorized>
+
+		      } />
+      </Routes>
+
+    </header>
       <TaskList />
     </div>
-    <Outlet/>
-    </>
-    }/> 
-    {/* <Route path="/tasks" element={  }/> */}
-  
-    </Routes>
-  
-  )
-
+  </BrowserRouter>
+  );
 }
 
-export default Nutshell;
+
