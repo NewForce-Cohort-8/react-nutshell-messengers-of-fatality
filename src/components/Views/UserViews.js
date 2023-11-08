@@ -5,6 +5,8 @@ import { ArticleEntry } from "../articles/ArticleEntry"
 import { MessageList } from "../Messages/MessageList"
 import { MessageForm } from "../Messages/MessageForm"
 import { MessageEdit } from "../Messages/MessageEdit"
+import { TaskForm } from "../tasks/TaskForm"
+import { TaskList } from "../tasks/TaskList"
 
 export const UserViews = () => {
     return (
@@ -23,7 +25,9 @@ export const UserViews = () => {
                 <Route path="articleEntries/:userId" element={<ArticleEntry />} />
                 <Route path="articles/create" element={<ArticleForm />} />
                 <Route path="articles" element={<ArticleList />} />
-                
+                <Route path="tasks" element={<TaskList />} />
+                <Route path="taskForm" element={<TaskForm />} />
+
             </Route>
         </Routes>
     )

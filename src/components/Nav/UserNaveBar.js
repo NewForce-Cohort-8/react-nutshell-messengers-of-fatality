@@ -9,7 +9,9 @@ export const UserNav = () => {
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/articleEntries">Articles</Link>
             </li>
-         
+            <li className="navbar__item active">
+                <Link className="navbar__link" to="/tasks">Tasks</Link>
+            </li>
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/messages">Messages</Link>
             </li>

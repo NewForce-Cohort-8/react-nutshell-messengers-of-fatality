@@ -6,12 +6,7 @@ import { UserNav } from "./components/Nav/UserNaveBar";
 import { Login } from "./components/auth/Login"
 import { Register } from "./components/auth/Register";
 import './Nutshell.css';
-import { Outlet } from "react-router-dom"
-import { TaskList } from './components/tasks/TaskList';
 
-
-import { MessageForm } from './components/Messages/MessageForm';
-import { MessageList } from './components/Messages/MessageList';
 
 export const Nutshell = () => {
   return (
@@ -39,7 +34,7 @@ export const Nutshell = () => {
       </Routes>
 
     </header>
-      <TaskList />
+   
     </div>
   </BrowserRouter>
   );
