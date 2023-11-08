@@ -6,6 +6,7 @@ import { MessageList } from "../Messages/MessageList"
 import { MessageForm } from "../Messages/MessageForm"
 import { MessageEdit } from "../Messages/MessageEdit"
 import { Images } from "../images/Images"
+import { ImageForm } from "../images/ImageForm"
 
 export const UserViews = () => {
     return (
@@ -18,6 +19,7 @@ export const UserViews = () => {
                     <Outlet />
                 </>
             }>
+                <Route path="imageForm" element={ <ImageForm />} />
                 <Route path="images" element={ <Images />} />
                 <Route path="messageForm" element={<MessageForm />} />
                 <Route path="messages" element={<MessageList />} />
