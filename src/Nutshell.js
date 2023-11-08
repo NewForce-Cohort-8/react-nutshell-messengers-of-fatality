@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { Authorized } from "./components/views/Authorized";
-import { ApplicationViews } from "./components/views/ApplicationViews";
+import { Authorized } from "./components/Views/Authorized";
+import { ApplicationViews } from "./components/Views/ApplicationViews";
 import { UserNav } from "./components/Nav/UserNaveBar";
 // import { UserViews } from "./components/views/UserViews";
 import { Login } from "./components/auth/Login"
@@ -10,6 +10,8 @@ import { Outlet } from "react-router-dom"
 import { TaskList } from './components/tasks/TaskList';
 
 
+import { MessageForm } from './components/Messages/MessageForm';
+import { MessageList } from './components/Messages/MessageList';
 
 export const Nutshell = () => {
   return (
@@ -29,6 +31,7 @@ export const Nutshell = () => {
                 <UserNav />
                 <ApplicationViews />
 					      {/* <UserViews /> */}
+                
 				      </>
 			      </Authorized>
 
@@ -40,6 +43,7 @@ export const Nutshell = () => {
     </div>
   </BrowserRouter>
   );
+
 }
 
 

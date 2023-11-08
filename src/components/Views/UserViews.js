@@ -2,6 +2,9 @@ import { Outlet, Route, Routes } from "react-router-dom"
 import { ArticleForm } from "../articles/ArticleForm"
 import { ArticleList } from "../articles/ArticleList"
 import { ArticleEntry } from "../articles/ArticleEntry"
+import { MessageList } from "../Messages/MessageList"
+import { MessageForm } from "../Messages/MessageForm"
+import { MessageEdit } from "../Messages/MessageEdit"
 
 export const UserViews = () => {
     return (
@@ -14,12 +17,13 @@ export const UserViews = () => {
                     <Outlet />
                 </>
             }>
-
-                
-                
+                <Route path="messageForm" element={<MessageForm />} />
+                <Route path="messages" element={<MessageList />} />
+                <Route path="messages/:messageId/edit" element={<MessageEdit />}/>
                 <Route path="articleEntries/:userId" element={<ArticleEntry />} />
                 <Route path="articles/create" element={<ArticleForm />} />
                 <Route path="articles" element={<ArticleList />} />
+                
             </Route>
         </Routes>
     )
