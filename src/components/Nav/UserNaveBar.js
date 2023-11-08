@@ -13,12 +13,9 @@ export const UserNav = () => {
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/messages">Messages</Link>
             </li>
-            {/* <li className="navbar__item active">
-                <Link className="navbar__link" to="/users">Users</Link>
-            </li>
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/customers">Customers</Link>
-            </li> */}
+                <Link className="navbar__link" to="/images">Images</Link>
+            </li>
             {
                 localStorage.getItem("nutshell_user")
                     ? <li className="navbar__item navbar__logout">

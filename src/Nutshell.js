@@ -6,8 +6,7 @@ import { UserNav } from "./components/Nav/UserNaveBar";
 import { Login } from "./components/auth/Login"
 import { Register } from "./components/auth/Register";
 import './Nutshell.css';
-import { MessageForm } from './components/Messages/MessageForm';
-import { MessageList } from './components/Messages/MessageList';
+
 
 export const Nutshell = () => {
   return (
